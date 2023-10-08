@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "name": "Cultural Celebrations Programing Venue",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Experience the vibrant and colorful world of traditional dances from around the globe. Our skilled performers will dazzle you with their cultural moves.",
+      "price": 250
+    },
+    {
+      "id": 2,
+      "name": "Cultural Costume Rental",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Offer a wide range of authentic cultural costumes for rent, allowing event attendees to dress up in traditional attire for a more immersive experience.",
+      "price": 150
+    },
+    {
+      "id": 3,
+      "name": "Cultural Decoration Services",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Specialize in culturally themed event decorations, including table settings, centerpieces, and venue decor that represent various cultures.",
+      "price": 180
+    },
+    {
+      "id": 4,
+      "name": "Cultural Art Exhibition",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Explore a stunning collection of art and artifacts that showcase the beauty and creativity of various cultures.",
+      "price": 180
+    },
+    {
+      "id": 5,
+      "name": "Folk Music Concert",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Listen to the soulful melodies and rhythms of traditional folk music, played by talented musicians from different regions.",
+      "price": 200
+    },
+    {
+      "id": 6,
+      "name": "Costume Parade",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Join the colorful costume parade and wear authentic attire from different cultures. A fun and interactive experience for all ages.",
+      "price": 120
+    },
+    {
+        "id": 7,
+        "name": "Traditional Dance Performance",
+        "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+        "description": "Experience the vibrant and colorful world of traditional dances from around the globe. Our skilled performers will dazzle you with their cultural moves.",
+        "price": 250
+      },
+    {
+      "id": 8,
+      "name": "Cultural Music and Dance Workshops",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Provide workshops where participants can learn traditional music and dance styles from different cultures, taught by experienced instructors.",
+      "price": 300
+    },
+    {
+      "id": 9,
+      "name": "Cultural Photography Services",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Provide photography services that capture the essence of cultural celebrations and events, ensuring memories are preserved beautifully.",
+      "price": 300
+    },
+    {
+      "id": 10,
+      "name": "Cultural Storytelling Performances:",
+      "image": "https://i.ibb.co/J3GdW3F/1.jpg",
+      "description": "Arrange performances where skilled storytellers share tales, myths, and legends from different cultures, engaging and educating event attendees.",
+      "price": 300
+    }
+  ]
+  
