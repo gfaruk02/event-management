@@ -36,6 +36,14 @@ const Login = () => {
             console.error(error);
         })
     }
+    let count = 0;
+const nums = [0, 1, 2, 3];
+
+nums.forEach((num) => {
+  if (num) count += 1;
+});
+
+console.log(count);
     return (
         <div>
             <div className="text-center pt-10 w-4/5 md:w-2/3 lg:w-2/6 mx-auto " >
@@ -120,6 +128,7 @@ const Login = () => {
                 </div>
 
             </div>
+
         </div>
     );
 };

@@ -49,7 +49,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case md:text-2xl text-white ml-0 pb-0">
-                    Cultural Rhythms
+                    Cultural Calibration
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
