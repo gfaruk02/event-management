@@ -1,40 +1,41 @@
-// import { useContext, useState } from "react";
-// import { Link, useNavigate } from "react-router-dom";
-// import { AuthContext } from "../provider/AuthProvider";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 const Login = () => {
 
-    // const { signInUser, singInGoogle } = useContext(AuthContext);
-    // const [showPassword, setShowPassword] = useState(false);
-    // const navigate = useNavigate();
-    // const handleRegister = (e) => {
-    //     console.log('register');
-    //     e.preventDefault();
-    //     const form = new FormData(e.currentTarget)
-    //     const email = form.get('email');
-    //     const password = form.get('password');
-    //     console.log(email, password);
-    //     //sign In User
-    //     signInUser(email, password)
-    //     .then(result=>{
-    //         console.log(result.user);
-    //         e.target.reset();
-    //         navigate('/');
-    //     })
-    //     .catch(error =>{
-    //         console.error(error);
-    //     })
-    // }
-    // const handleGoogleSignIn =()=>{
-    //     singInGoogle()
-    //     .then(result=>{
-    //         console.log(result.user);
-    //     })
-    //     .catch(error=>{
-    //         console.error(error);
-    //     })
-    // }
+    const { signInUser, singInGoogle } = useContext(AuthContext);
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+    const handleRegister = (e) => {
+        console.log('register');
+        e.preventDefault();
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(email, password);
+        //sign In User
+        signInUser(email, password)
+        .then(result=>{
+            console.log(result.user);
+            e.target.reset();
+            navigate('/');
+        })
+        .catch(error =>{
+            console.error(error);
+        })
+    }
+    const handleGoogleSignIn =()=>{
+        singInGoogle()
+        .then(result=>{
+            console.log(result.user);
+        })
+        .catch(error=>{
+            console.error(error);
+        })
+    }
     return (
         <div>
             <div className="text-center pt-10 w-4/5 md:w-2/3 lg:w-2/6 mx-auto " >
@@ -53,10 +54,16 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" type={showPassword? "text":"password"}  
+                           <div className="flex items-center relative">
+                           <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" type={showPassword? "text":"password"}  
                             placeholder="password"
                             name="password" required />
-                            <span onClick={()=>setShowPassword(!showPassword)}>show</span>
+                            <span className=" absolute right-2" onClick={()=>setShowPassword(!showPassword)}>
+                            {
+                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                            }
+                            </span>
+                           </div>
                         </div>
 
                         <div className="-ml-2.5 flex justify-between">
@@ -106,7 +113,7 @@ const Login = () => {
                             <button className="py-3 px-4 ">Login</button>
                         </div>
                         <div> 
-                            <button onClick={handleGoogleSignIn}> Gogle Signin</button>
+                            <button onClick={handleGoogleSignIn}>Login with Google</button>
                         </div>
                     </form>
                     <p className="mt-2 mb-3 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">Do not Have an Account? Please <Link className="ml-1 block font-sans text-base font-bold leading-normal text-pink-500 antialiased" to="/register"> <button className=""> Register</button></Link></p>
