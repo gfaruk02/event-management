@@ -1,9 +1,15 @@
 
+import { useLoaderData } from "react-router-dom";
 import Header from "../Header/Header";
+// import { useState } from "react";
+import Services from "../Services/Services";
 
 
 
 const Home = () => {
+    const servicesData = useLoaderData();
+
+    // const [services, setServices] = useState([]);
     return (
         <div className='w-11/12 mx-auto'>
             <Header></Header>
@@ -25,7 +31,15 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <h1>services</h1>
+            <div> 
+                <h1 className="text-5xl text-center py-10">Our Services</h1>
+            </div>
+            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-3 ">
+                {
+                    servicesData.map(service => <Services key={service.id} service={service} ></Services>)
+                }
+            </div>
+            {/* <h1>services</h1> */}
         </div>
     );
 };

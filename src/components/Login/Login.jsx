@@ -39,7 +39,7 @@ const Login = () => {
     return (
         <div>
             <div className="text-center pt-10 w-4/5 md:w-2/3 lg:w-2/6 mx-auto " >
-                <div className="relative mb-4 grid h-28 w-full place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-400 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
+                <div className="relative mb-4 grid h-28 w-full place-items-center overflow-hidden rounded-xl bg-gradient-to-tr bg-rose-700 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
                     <h1 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">Login</h1>
                 </div>
                 <div className="border mb-9 pb-3">
@@ -60,7 +60,7 @@ const Login = () => {
                             name="password" required />
                             <span className=" absolute right-2" onClick={()=>setShowPassword(!showPassword)}>
                             {
-                                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                showPassword ? <FaEyeSlash className=" text-rose-400 text-lg"></FaEyeSlash> : <FaEye className=" text-rose-400 text-lg"></FaEye>
                             }
                             </span>
                            </div>
@@ -109,14 +109,14 @@ const Login = () => {
                                 </label>
                             </div>
                         </div>
-                        <div className="form-control mt-6 rounded-lg  bg-gradient-to-tr from-pink-400 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">
-                            <button className="py-3 px-4 ">Login</button>
+                        <div className="form-control mt-6 rounded-lg  bg-gradient-to-tr bg-rose-700 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40 hover:bg-rose-500">
+                            <button className="py-3 px-4  ">Login</button>
                         </div>
                         <div> 
                             <button onClick={handleGoogleSignIn}>Login with Google</button>
                         </div>
                     </form>
-                    <p className="mt-2 mb-3 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">Do not Have an Account? Please <Link className="ml-1 block font-sans text-base font-bold leading-normal text-pink-500 antialiased" to="/register"> <button className=""> Register</button></Link></p>
+                    <p className="mt-2 mb-3 flex justify-center font-sans text-sm font-light leading-normal text-inherit antialiased">Do not Have an Account? Please <Link className="ml-1 block font-sans text-base font-bold leading-normal text-rose-500 antialiased" to="/register"> <button className=""> Register</button></Link></p>
                 </div>
 
             </div>

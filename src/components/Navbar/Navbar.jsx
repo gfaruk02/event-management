@@ -11,33 +11,34 @@ const Navbar = () => {
             .then()
             .catch()
     }
+    
     const navLinks = <>
-        <li> <NavLink to="/" style={isActive => ({
-            color: isActive ? "green" : "blue"
+        <li className="font-semibold font-poppins "> <NavLink to="/" style={isActive => ({
+            color: isActive ? "white" : "DarkSlateBlue"
         })} > Home</NavLink> </li>
-        <li> <NavLink to="/login" style={isActive => ({
-            color: isActive ? "green" : "blue"
+        <li className="font-semibold font-poppins "> <NavLink to="/login" style={isActive => ({
+            color: isActive ? "white" : "DarkSlateBlue"
         })} > Login</NavLink> </li>
-        <li> <NavLink to="/register" style={isActive => ({
-            color: isActive ? "green" : "blue"
+        <li className="font-semibold font-poppins "> <NavLink to="/register" style={isActive => ({
+            color: isActive ? "white" : "DarkSlateBlue"
         })} > Register</NavLink> </li>
         {
             user &&
             <>
-                <li> <NavLink to="/about" style={isActive => ({
-                    color: isActive ? "green" : "blue"
+                <li className="font-semibold font-poppins "> <NavLink to="/about" style={isActive => ({
+                    color: isActive ? "white" : "DarkSlateBlue"
                 })} > About Us</NavLink> </li>
-                <li> <NavLink to="/contact" style={isActive => ({
-                    color: isActive ? "green" : "blue"
+                <li className="font-semibold font-poppins "> <NavLink to="/contact" style={isActive => ({
+                    color: isActive ? "white" : "DarkSlateBlue"
                 })} > Contact US</NavLink> </li>
             </>
         }
-        <li> <NavLink to="/blog" style={isActive => ({
-            color: isActive ? "green" : "blue"
+        <li className="font-semibold font-poppins "> <NavLink to="/blog" style={isActive => ({
+            color: isActive ? "white" : "DarkSlateBlue"
         })} > Blog</NavLink> </li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-rose-900 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -47,12 +48,12 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">
+                <a className="btn btn-ghost normal-case text-2xl text-white">
                     Cultural Rhythms
                 </a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 ">
                     {navLinks}
                 </ul>
             </div>
@@ -64,14 +65,14 @@ const Navbar = () => {
                         <>
 
                             <span> {user.email} </span>
-                            <div className="w-10 rounded-full">
+                            <div className="w-10 rounded-full mx-2">
                                 <img src={userDefaultPicture} />
                             </div>
-                            <button onClick={handleSignOut} className="btn">Sign Out</button>
+                            <button onClick={handleSignOut} className=" py-2 px-4 bg-rose-700 rounded-lg hover:bg-rose-400  text-white font-semibold">Sign Out</button>
                         </>
                         :
                         <Link to='/login'>
-                            <button className="btn">Login</button>
+                            <button className=" bg-rose-700 rounded-lg hover:bg-rose-400 text-white font-semibold py-2 px-4">Login</button>
                         </Link>
                 }
             </div>

@@ -14,6 +14,7 @@ import Blog from './components/Blog/Blog';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Details from './components/Services/Details';
 
 
 const router = createBrowserRouter([
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader: ()=> fetch('/services.json')
       },
       {
         path: "/login",
@@ -37,13 +39,19 @@ const router = createBrowserRouter([
         path: "/blog",
         element: <PrivateRoute><Blog></Blog></PrivateRoute>
       },
+
+      {
+        path:'/details/:id',
+        element: <PrivateRoute> <Details></Details></PrivateRoute>,
+        loader: ()=> fetch('/services.json')
+      },
       {
         path: "/about",
-        element: <About></About>
+        element: <PrivateRoute><About></About></PrivateRoute>
       },
       {
         path: "/contact",
-        element: <Contact></Contact>
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>
       }
 
     ]
