@@ -24,7 +24,7 @@ const Details = () => {
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-2 pt-14 pb-5 gap-9"> 
                 <h1 className="text-2xl font-bold pb-2 text-right"> {service.name}</h1>
-                <p className="flex justify-end"> <span className="bg-slate-500 px-5 py-3 rounded-lg text-xl font-semibold text-white"> Price: $ {service.price}</span> </p>
+                <p className="flex justify-end"> <span className="bg-rose-500 px-5 py-3 rounded-lg text-xl font-semibold text-white"> Price: $ {service.price}</span> </p>
                 </div>
                 <div className="px-56 text-center"> 
                     {service.description}
@@ -32,7 +32,7 @@ const Details = () => {
             </div>
 
 
-            <div className=" flex items-center gap-4 bg-red-300 mt-10 rounded-lg">
+            <div className=" flex items-center gap-4 bg-rose-300 mt-10 rounded-lg">
                 <div className="w-1/2 p-6">
                     <img className="rounded-lg" src={`https://i.ibb.co/z8MZryX/Great-Hall-Custom-Setup-01-1.png`} alt="" />
                 </div>
