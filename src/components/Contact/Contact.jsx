@@ -63,10 +63,9 @@ const Contact = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Type Text</span>
+                                        <span className="label-text">Type Message</span>
                                     </label>
-                                    <textarea rows="4" cols="50" name="comment" form="usrform">
-                                        Enter text here...</textarea>
+                                    <textarea placeholder="Write Your Message" className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
                                 </div>
                                 <div className="form-control mt-6">
                                     <button className="btn btn-primary  bg-rose-600 
