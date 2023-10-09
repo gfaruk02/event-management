@@ -6,14 +6,14 @@ import { useLoaderData, useParams } from "react-router-dom";
 const Details = () => {
     const { id } = useParams();
     const services = useLoaderData();
-    console.log(services);
+    // console.log(services);
     const [service, setService] = useState([])
     useEffect(() => {
         const singleService = services?.find(service => service.id === id)
         setService(singleService)
 
     }, [id, services])
-    console.log(service);
+    // console.log(service);
 
 
     return (
