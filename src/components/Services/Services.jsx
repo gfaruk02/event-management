@@ -7,13 +7,13 @@ const Services = ({service}) => {
         <div>
             
             <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
-    <img
+  <div data-aos="fade-right" className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+    <img 
       src={image}
       className="h-full w-full object-cover"
     />
   </div>
-  <div className="p-6">
+  <div data-aos="fade-down-left" className="p-6">
     <div className="mb-2 flex items-center justify-between">
       <p className="block font-sans text-xl font-medium leading-relaxed text-blue-gray-900 antialiased text-rose-600">
        {name}
@@ -29,7 +29,7 @@ const Services = ({service}) => {
 }
     </p>
   </div>
-  <div className="p-6 pt-0">
+  <div data-aos="flip-left" className="p-6 pt-0">
     
       <Link to={`/details/${id}`}> <button
       className="block text-white bg-rose-600 w-full select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-blue-gray-900 transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

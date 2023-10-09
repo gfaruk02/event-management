@@ -4,14 +4,14 @@ const Footer = () => {
     return (
         <div>
             <footer className="footer p-10 bg-rose-500 text-white">
-                <nav>
+                <nav data-aos="fade-left">
                     <header className="footer-title">Top Services</header>
                     <a className="link link-hover">Cultural Celebrations Venue</a>
                     <a className="link link-hover">Cultural Art Exhibition</a>
                     <a className="link link-hover">Folk Music Concert</a>
                     <a className="link link-hover">Traditional Dance Performance</a>
                 </nav>
-                <nav>
+                <nav  data-aos="fade-right">
                     <header className="footer-title">Company</header>
                     <a className="link link-hover">Home</a>
                     <a className="link link-hover">About us</a>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <a className="link link-hover">Blog</a>
                  
                 </nav>
-                <nav>
+                <nav data-aos="fade-down-right">
                     <header className="footer-title">Legal</header>
                     <a className="link link-hover">Terms of use</a>
                     <a className="link link-hover">Privacy policy</a>
