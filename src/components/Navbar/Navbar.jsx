@@ -12,29 +12,29 @@ const Navbar = () => {
     }
     
     const navLinks = <>
-        <li className="font-semibold font-poppins "> <NavLink to="/" style={isActive => ({
-            color: isActive ? "white" : "DarkSlateBlue"
-        })} > Home</NavLink> </li>
-        <li className="font-semibold font-poppins "> <NavLink to="/login" style={isActive => ({
-            color: isActive ? "white" : "DarkSlateBlue"
-        })} > Login</NavLink> </li>
-        <li className="font-semibold font-poppins "> <NavLink to="/register" style={isActive => ({
-            color: isActive ? "white" : "DarkSlateBlue"
-        })} > Register</NavLink> </li>
+        <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/"  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > Home</NavLink> </li>
+        <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/login"  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > Login</NavLink> </li>
+        <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/register"  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > Register</NavLink> </li>
         {
             user &&
             <>
-                <li className="font-semibold font-poppins "> <NavLink to="/about" style={isActive => ({
-                    color: isActive ? "white" : "DarkSlateBlue"
-                })} > About Us</NavLink> </li>
-                <li className="font-semibold font-poppins "> <NavLink to="/contact" style={isActive => ({
-                    color: isActive ? "white" : "DarkSlateBlue"
-                })} > Contact US</NavLink> </li>
+                <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/about" className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > About Us</NavLink> </li>
+                <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/contact" className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > Contact US</NavLink> </li>
             </>
         }
-        <li className="font-semibold font-poppins "> <NavLink to="/blog" style={isActive => ({
-            color: isActive ? "white" : "DarkSlateBlue"
-        })} > Blog</NavLink> </li>
+        <li className="font-semibold font-poppins text-red-200 text-base "> <NavLink to="/blog"  className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : "white"
+  } > Blog</NavLink> </li>
     </>
     return (
         <div className="navbar bg-rose-900 lg:pl-12 lg:pr-5">
