@@ -15,12 +15,14 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Details from './components/Services/Details';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
