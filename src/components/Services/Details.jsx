@@ -20,7 +20,7 @@ const Details = () => {
         <div className="max-w-7xl mx-auto">
             <div> 
                 <div className=" "> 
-                    <img className="h-[70vh] w-full" src={service.image} alt="" />
+                    <img className="h-[90vh] w-full" src={service.image} alt="" />
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-2 pt-14 pb-5 gap-9"> 
                 <h1 className="text-2xl font-bold pb-2 text-right"> {service.name}</h1>
@@ -32,7 +32,7 @@ const Details = () => {
             </div>
 
 
-            <div className=" flex items-center gap-4 bg-rose-300 mt-10 rounded-lg">
+            <div className=" flex items-center gap-4 bg-rose-300 mt-10 rounded-lg mb-10">
                 <div className="w-1/2 p-6">
                     <img className="rounded-lg" src={`https://i.ibb.co/z8MZryX/Great-Hall-Custom-Setup-01-1.png`} alt="" />
                 </div>

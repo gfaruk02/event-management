@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-import userDefaultPicture from "../../assets/user.png"
+// import userDefaultPicture from "../../assets/user.png"
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
 
     const handleSignOut = () => {
         logOut()
-            .then()
-            .catch()
+            .then(()=> console.log('User Logged Out Successfully'))
+            .catch(error=> console.error(error))
     }
     
     const navLinks = <>
@@ -65,9 +65,9 @@ const Navbar = () => {
                         <>
                         
                      
-                            <span className=" text-white "> {user.email} </span>
+                            <span className=" text-white "> {user.displayName} </span>
                             <div className="w-5 md:w-10 rounded-full mx-2">
-                                <img src={userDefaultPicture} />
+                                <img src={user.photoURL} />
                             
 {/* 
                             <div className="grid grid-cols-1 md:grid-cols-2">

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from 'prop-types';
 
 const Services = ({service}) => {
     const {id, name, image, description, price} = service;
@@ -43,3 +43,7 @@ const Services = ({service}) => {
 };
 
 export default Services;
+
+Services.propTypes = {
+  service: PropTypes.node 
+}

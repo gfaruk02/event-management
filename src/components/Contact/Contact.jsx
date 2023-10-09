@@ -18,15 +18,16 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto items-center">
-                <div> 
+            <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto items-center">
+                <div className='mx-auto'> 
                 <div className='flex gap-4 items-center pb-10'> 
                     <FaBook className='text-rose-500 text-2xl'></FaBook>
                     <div> 
                         <h4 className="text-xl pb-3 text-rose-600"> Address:</h4>
                         <p> 260/Cultur , Dhaka, Bangladesh</p>
                     </div>
-                </div><div className='flex gap-4 items-center  pb-10'> 
+                </div>
+                <div className='flex gap-4 items-center  pb-10'> 
                     <FaPhone className='text-rose-500 text-2xl'></FaPhone>
                     <div> 
                         <h4 className="text-xl pb-3 text-rose-600"> Phone:</h4>

@@ -1,49 +1,49 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
+import Swal from "sweetalert2";
 
 const Login = () => {
 
     const { signInUser, singInGoogle } = useContext(AuthContext);
+    const location = useLocation();
+    console.log(location);
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    const handleRegister = (e) => {
-        console.log('register');
+    const handleRegister =(e) => {
+        // console.log('login');
         e.preventDefault();
         const form = new FormData(e.currentTarget)
         const email = form.get('email');
         const password = form.get('password');
-        console.log(email, password);
-        //sign In User
+        // console.log(email, password);
+
         signInUser(email, password)
         .then(result=>{
             console.log(result.user);
             e.target.reset();
-            navigate('/');
+            navigate( location?.state ? location.state : '/' );
         })
         .catch(error =>{
-            console.error(error);
+            if(error){
+                Swal.fire('You Email or Password is incorrect. Please try again.');
+            }
         })
+        // console.log(loginError);
     }
     const handleGoogleSignIn =()=>{
         singInGoogle()
         .then(result=>{
             console.log(result.user);
+            navigate( location?.state ? location.state : '/' );
         })
         .catch(error=>{
-            console.error(error);
+            if(error){
+                Swal.fire('You Email is incorrect. Please try again.');
+            }
         })
     }
-    let count = 0;
-const nums = [0, 1, 2, 3];
-
-nums.forEach((num) => {
-  if (num) count += 1;
-});
-
-console.log(count);
     return (
         <div>
             <div className="text-center pt-10 w-4/5 md:w-2/3 lg:w-2/6 mx-auto " >
@@ -56,7 +56,10 @@ console.log(count);
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" type="email" placeholder="email" name="email" required />
+                            <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" type="email" placeholder="email" name="email"
+                            // value={email}
+                            // onChange={(e) => setEmail(e.target.value)}
+                             required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -65,6 +68,8 @@ console.log(count);
                            <div className="flex items-center relative">
                            <input className="peer h-full w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50" type={showPassword? "text":"password"}  
                             placeholder="password"
+                            // value={password}
+                            // onChange={(e) => setPassword(e.target.value)}
                             name="password" required />
                             <span className=" absolute right-2" onClick={()=>setShowPassword(!showPassword)}>
                             {
@@ -128,7 +133,6 @@ console.log(count);
                 </div>
 
             </div>
-
         </div>
     );
 };
